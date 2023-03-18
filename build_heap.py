@@ -7,7 +7,7 @@ def build_heap(data):
     # try to achieve  O(n) and not O(n2)
 
     m = len(data)
-    for i in range(n//2, -1, -1): 
+    for i in range(m//2, -1, -1): 
         right = 2 * i + 2
         left = 2 * i + 1
         small = i 
