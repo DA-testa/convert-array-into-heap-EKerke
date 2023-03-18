@@ -19,7 +19,7 @@ def build_heap(data):
             data[i], data[small] = data[small], data[i] 
             swaps.append((i,small))
             j = small 
-            while j < n//2 
+            while j < n//2:  
                 right = 2 * j + 2
                 left = 2 * j + 1 
                 small = j 
