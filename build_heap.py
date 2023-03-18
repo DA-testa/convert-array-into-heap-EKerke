@@ -6,26 +6,26 @@ def build_heap(data):
     # TODO: Create heap and heap sort
     # try to achieve  O(n) and not O(n2)
 
-    n = len(data)
+    m = len(data)
     for i in range(n//2, -1, -1): 
         right = 2 * i + 2
         left = 2 * i + 1
         small = i 
-        if right < n and data[right] < data[small]: 
+        if right < m and data[right] < data[small]: 
             small = right
-        if left < n and data[left] < data[small]: 
+        if left < m and data[left] < data[small]: 
             small = left
         if small != i:
             data[i], data[small] = data[small], data[i] 
             swaps.append((i,small))
             j = small 
-            while j < n//2:  
+            while j < m//2:  
                 right = 2 * j + 2
                 left = 2 * j + 1 
                 small = j 
-                if right < n and data[right] < data[small]: 
+                if right < m and data[right] < data[small]: 
                     small = right
-                if left < n and data[left] < data[small]: 
+                if left < m and data[left] < data[small]: 
                     small = left
                 if small != j: 
                     data[j], data[small] = data[small], data[j] 
