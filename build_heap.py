@@ -40,7 +40,9 @@ def main():
     # TODO : add input and corresponding checks
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
-
+    text = input()
+    if "I" in text: 
+        text = input()
 
     # input from keyboard
     n = int(input())
