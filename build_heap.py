@@ -6,6 +6,7 @@ def build_heap(data):
     # TODO: Create heap and heap sort
     # try to achieve  O(n) and not O(n2)
 
+    n = len(data)
     for i in range(n//2, -1, -1): 
         right = 2 * i + 2
         left = 2 * i + 1
