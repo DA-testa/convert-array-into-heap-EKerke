@@ -11,9 +11,9 @@ def build_heap(data):
         right = 2 * i + 2
         left = 2 * i + 1
         small = i 
-        if right < n and data[right] < data[small]
+        if right < n and data[right] < data[small]: 
             small = right
-        if left < n and data[left] < data[small]
+        if left < n and data[left] < data[small]: 
             small = left
         if small != i:
             data[i], data[small] = data[small], data[i] 
@@ -23,11 +23,11 @@ def build_heap(data):
                 right = 2 * j + 2
                 left = 2 * j + 1 
                 small = j 
-                if right < n and data[right] < data[small]
+                if right < n and data[right] < data[small]: 
                     small = right
-                if left < n and data[left] < data[small]
+                if left < n and data[left] < data[small]: 
                     small = left
-                if small != j:
+                if small != j: 
                     data[j], data[small] = data[small], data[j] 
                     swaps.append((j,small))
                     j = small 
