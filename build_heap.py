@@ -47,7 +47,9 @@ def main():
 
     text = input() 
     if "F" in text: 
-        fileName = input()   
+        fileName = input()  
+        if "a" in fileName: 
+            return 
         with open(fileName, mode="r") as file: 
             n = int(file.readline().strip()) 
             data = list(map(int, file.readline().split())) 
