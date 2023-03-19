@@ -63,7 +63,7 @@ def main():
     # this number should be less than 4n (less than 4*len(data))
 
     # output all swaps
-    print(len(swapCount))
+    print(swapCount)
     for i, j in swaps:
         print(i, j)
 
