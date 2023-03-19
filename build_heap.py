@@ -45,16 +45,16 @@ def main():
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
 
-    text = input()
+    text = input().strip() 
     if "F" in text: 
-        fileName = input() 
+        fileName = input().strip() 
         if "a" in fileName: 
             return 
-        with open(f"./test/04", mode="r") as file: 
-            n = int(file.readline()) 
+        with open(fileName, mode="r") as file: 
+            n = int(file.readline().strip()) 
             data = list(map(int, readline().split())) 
     if "I" in text: 
-        n = int(input()) 
+        n = int(input().strip()) 
         data = list(map(int, input().split())) 
 
     # input from keyboard
