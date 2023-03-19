@@ -7,6 +7,7 @@ def build_heap(data):
     # try to achieve  O(n) and not O(n2)
 
     n = len(data)
+    swapCount = 0 
     for i in range(n//2, -1, -1): 
         right = 2 * i + 2
         left = 2 * i + 1
@@ -18,6 +19,7 @@ def build_heap(data):
         if small != i:
             data[i], data[small] = data[small], data[i] 
             swaps.append((i,small))
+            swapCount += 1 
             j = small 
             while j < n//2:  
                 right = 2 * j + 2
@@ -30,10 +32,11 @@ def build_heap(data):
                 if small != j: 
                     data[j], data[small] = data[small], data[j] 
                     swaps.append((j,small))
+                    swapCount += 1 
                     j = small 
                 else: 
                     break
-    return swaps
+    return swaps, swapCount
 
 
 def main():
@@ -54,13 +57,13 @@ def main():
 
     # calls function to assess the data 
     # and give back all swaps
-    swaps = build_heap(data)
+    swaps, swapCount = build_heap(data)
 
     # TODO: output how many swaps were made, 
     # this number should be less than 4n (less than 4*len(data))
 
     # output all swaps
-    print(len(swaps))
+    print(len(swapCount))
     for i, j in swaps:
         print(i, j)
 
