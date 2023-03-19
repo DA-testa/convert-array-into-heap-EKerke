@@ -53,7 +53,7 @@ def main():
     # input from keyboard
 
     n = len(data) 
-    assert n == int(input().strip()) 
+    n = int(input().strip().split()[0]) 
 
     # calls function to assess the data 
     # and give back all swaps
