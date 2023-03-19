@@ -47,7 +47,7 @@ def main():
 
     text = input() 
     if "F" in text: 
-        fileName = input()  
+        fileName = input() + ".txt"  
         if "a" in fileName: 
             return 
         with open(fileName, mode="r") as file: 
