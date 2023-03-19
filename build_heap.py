@@ -51,9 +51,9 @@ def main():
         data = list(map(float, input().split())) 
 
     # input from keyboard
-
-    n = len(data) 
-    n = int(input().strip().split()[0]) 
+    n = int(input().strip().split()[0])  
+    data = list(map(int, input().split())) 
+    assert n == len(data) 
 
     # calls function to assess the data 
     # and give back all swaps
