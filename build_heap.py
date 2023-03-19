@@ -50,7 +50,7 @@ def main():
         fileName = input() 
         if "a" in fileName: 
             return 
-        with open(f"./test/{fileName}", mode="r") as file: 
+        with open(f"./test/04", mode="r") as file: 
             n = int(file.readline()) 
             data = list(map(int, readline().split())) 
     if "I" in text: 
