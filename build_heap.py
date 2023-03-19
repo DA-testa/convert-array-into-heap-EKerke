@@ -1,5 +1,5 @@
 # python3
-
+#Evelīna Paula Ķerķe 221RDB044
 
 def build_heap(data):
     swaps = []
@@ -44,16 +44,15 @@ def main():
     # TODO : add input and corresponding checks
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
-    text = input().strip() 
-    if text == 'I': 
-        data = list(map(int, input().split())) 
-    if text == 'F': 
-        data = list(map(float, input().split())) 
 
+    text = input().strip() 
+    try: 
+        with open(text, 'r') as f: 
+            data = list(map(int, f.readline().split())) 
+    except FileNotFoundError: 
+        data = list(map(int, text.split())) 
+        
     # input from keyboard
-    n = int(input().strip().split()[0])  
-    data = list(map(int, input().split())) 
-    assert n == len(data) 
 
     # calls function to assess the data 
     # and give back all swaps
