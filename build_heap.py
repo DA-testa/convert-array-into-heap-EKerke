@@ -45,17 +45,19 @@ def main():
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
 
-    text = input().strip() 
-    if text == 'I': 
+    text = input()
+    if "F" in text: 
+        fileName = input() 
+        if "a" in fileName: 
+            return 
+        with open(f"./test/{fileName}", mode="r") as file: 
+            n = int(file.readline()) 
+            data = list(map(int, readline().split())) 
+    if "I" in text: 
+        n = int(input()) 
         data = list(map(int, input().split())) 
-    if text == 'F': 
-        data = list(map(float, input().split())) 
 
     # input from keyboard
-
-    n = int(input().strip().split()[0]) 
-    data = list(map(int, input().split())) 
-    assert n == len(data) 
 
     # calls function to assess the data 
     # and give back all swaps
