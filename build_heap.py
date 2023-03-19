@@ -47,16 +47,10 @@ def main():
 
     text = input() 
     if "F" in text: 
-        fileName = input()  
-        while True: 
-            try: 
-                with open(fileName, mode="r") as file: 
-                    n = int(file.readline().strip()) 
-                    data = list(map(int, file.readline().split())) 
-                    break 
-            except FileNotFoundError: 
-                print("File not found.") 
-                fileName = input() 
+        fileName = input()   
+        with open(fileName, mode="r") as file: 
+            n = int(file.readline().strip()) 
+            data = list(map(int, file.readline().split())) 
     if "I" in text: 
         n = int(input()) 
         data = list(map(int, input().split())) 
