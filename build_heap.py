@@ -43,14 +43,14 @@ def main():
     # first two tests are from keyboard, third test is from a file
     text = input().strip() 
     if text == 'I': 
-        text = input().strip() 
+        data = list(map(int, input().split())) 
+    if text == 'F': 
+        data = list(map(float, input().split())) 
 
     # input from keyboard
-    n = int(input().strip())
-    data = list(map(int, input().split()))
 
-    # checks if lenght of data is the same as the said lenght
-    assert len(data) == n
+    n = len(data) 
+    assert n == int(input().strip()) 
 
     # calls function to assess the data 
     # and give back all swaps
